@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12</title>
+    <style>
+
+header{
+    height: 40px;
+    color: gray;
+    font-size: 18px;
+    font-family: Arial;
+    padding-left: 100px;
+    padding-top: 15px;
+}
+.toplayout{
+    background-color: #222222;
+    left: 0px;
+    right: 0px;
+}
+.underscore{
+    border-bottom: 1px solid gray;
+    margin-left:100px;
+    width:calc(100% - 150px);
+    margin-bottom:1vh;
+}
+.center{
+    margin-left: 100px;
+}
+footer{
+    margin-left: 100px;
+    position: relative;
+    width:100%;
+    font-size: 2vh;
+}
+a{
+    text-decoration: none;
+}
+span{
+    font-size: 25px;
+}
+body{
+    font-family: Arial;
+}
+.home{
+    color: gray;
+}
+</style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="toplayout"> 
+            <header>
+                <span> Backend3 </span> <span class="home">Home</span> <span class="mockups"> Mockups</span>
+            </header>
+        </div> 
+        <div class="center">
+            <h2 class="demonstration-i">Mockups</h2>
+            <ul>
+                <li><a href="/Mockups/Quiz?type=Quiz">Quiz</a></li>
+                <li><a href="/Mockups/Quiz?type=QuizResult">QuizResult</a></li>
+            </ul>
+        </div>
+        <div class="underscore"> </div>
+
+        <footer><p>© 2024 - Backend3</p></footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

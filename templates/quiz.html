@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" >
+    <title>lab-13</title>
+    <style>
+    header{
+        height: 40px;
+        color: gray;
+        font-size: 18px;
+        font-family: Arial;
+        padding-left: 100px;
+        padding-top: 15px;
+    }
+    .toplayout{
+        background-color: #222222;
+        left: 0px;
+        right: 0px;
+    }
+    .underscore{
+        border-bottom: 1px solid gray;
+        margin-left:100px;
+        width:calc(100% - 150px);
+        margin-bottom:1vh;
+    }
+    .center{
+        margin-left: 100px;
+    }
+    footer{
+        margin-left: 100px;
+        position: relative;
+        width:100%;
+        font-size: 2vh;
+    }
+    a{
+        text-decoration: none;
+    }
+    span{
+        font-size: 25px;
+    }
+    body{
+        font-family: Arial;
+    }
+    .b1{
+    font-weight: bold;
+}
+.check{
+    display: none;
+}
+
+.home, .mockups{
+    color: gray;
+}
+.finish{
+    color: white;
+    background-color: blue;
+}
+.links-h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+button{
+    width: 50px;
+    height: 20px;
+}
+.example{
+    margin-top: 30px;
+    border: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+    </style>
+</head>
+<body>
+    <div class="toplayout"> 
+        <header>
+            <span> Backend3 </span> <span class="home">Home</span> <span class="mockups"> Mockups</span>
+        </header>
+    </div>
+    <div class="center">
+        <div class="links-h2">Quiz</div>
+        <form action="{{url_for('addvalue')}}" method="post">
+            <input type="text" readonly class="example" name="example">
+            <p><input type="number" class="input-answer" name="answer"></p>
+            <div>
+                <button class="next" type="subbmit" data-type="0">Next</button>
+                <button class="finish" type="submit" data-type="0">Finish</button>
+                <input type="next" name="check" class="check">
+            </div>
+        </form>
+    </div>
+    <div class="underscore"> </div>
+
+        <footer><p>© 2024 - Backend3</p></footer>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
