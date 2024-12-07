@@ -6,10 +6,11 @@ function generateRandomExpression() {
 
     const expression = `${firstValue} ${sign} ${secondValue} =`;
 
-    document.querySelector('.example').value=expression;
-    document.querySelector('.finish').onlick=function(){
-        document.querySelector('.check').value='1';
+    document.querySelector('.example').value = expression;
+    document.querySelector('.finish').onclick = function () {
+        document.querySelector('.check').value = '1';
         console.log(document.querySelector('.check').value);
     };
 }
-document.querySelector('DOMContentLoaded', generateRandomExpression)
+
+document.addEventListener('DOMContentLoaded', generateRandomExpression);
